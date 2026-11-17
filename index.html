@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秘密入口导航站点-独立站点精选与入口索引</title>
+<meta name="description" content="秘密入口导航站点汇总独立站点、隐藏入口与可直接访问的专题站，按类别整理收藏路径、访问指南与更新记录，附常见问题与用户实测反馈。">
+<meta name="keywords" content="秘密入口导航站点">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e2a47'/%3E%3Cpath d='M18 34h28M18 34l8-8M18 34l8 8' stroke='%233ddc97' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='46' cy='22' r='5' fill='%23ffb86b'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0e1b2a;
+  --ink-2:#20344b;
+  --ink-3:#4a6178;
+  --paper:#f4f6f9;
+  --card:#ffffff;
+  --line:#d9e1ea;
+  --line-soft:#e7edf3;
+  --brand:#0e2a47;
+  --brand-2:#164a7a;
+  --accent:#12855f;
+  --accent-soft:#e2f5ec;
+  --warn:#b8560f;
+  --warn-soft:#fdf0e2;
+  --focus:#ff8a3d;
+  --radius-s:6px;
+  --radius-m:10px;
+  --radius-l:16px;
+  --shadow-s:0 1px 2px rgba(14,27,42,.06);
+  --shadow-m:0 6px 18px rgba(14,27,42,.08);
+  --fs-xs:12px;
+  --fs-s:13px;
+  --fs-m:15px;
+  --fs-l:17px;
+  --fs-xl:22px;
+  --fs-2xl:28px;
+  --fs-3xl:38px;
+  --space-1:6px;
+  --space-2:12px;
+  --space-3:18px;
+  --space-4:26px;
+  --space-5:38px;
+  --space-6:56px;
+  --announce-h:34px;
+  --head-h:62px;
+  --font:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--paper);
+  font-size:var(--fs-m);
+  line-height:1.75;
+  -webkit-text-size-adjust:100%;
+}
+a{color:var(--brand-2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px;}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:700;letter-spacing:.01em;}
+p{margin:0 0 var(--space-2);}
+ul,ol{margin:0 0 var(--space-2);padding-left:1.2em;}
+li{margin-bottom:4px;}
+img{max-width:100%;display:block;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+/* ===== 吸顶公告条 ===== */
+.announce{
+  position:sticky;top:0;z-index:60;
+  background:var(--brand);
+  color:#d6e6f3;
+  font-size:var(--fs-s);
+  padding:0 var(--space-3);
+  height:var(--announce-h);
+  display:flex;align-items:center;gap:10px;
+  overflow:hidden;
+}
+.announce strong{color:#8ef0c2;font-weight:600;white-space:nowrap;}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:#8ef0c2;flex:none;}
+.announce p{margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.announce a{color:#cfe8ff;text-decoration:underline;text-underline-offset:2px;}
+
+/* ===== 吸顶页头 ===== */
+.site-head{
+  position:sticky;top:var(--announce-h);z-index:55;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  height:var(--head-h);
+}
+.head-inner{
+  max-width:1180px;margin:0 auto;height:100%;
+  display:flex;align-items:center;gap:var(--space-3);
+  padding:0 var(--space-3);
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none;text-decoration:none;color:var(--ink);}
+.brand:hover{text-decoration:none;}
+.brand svg{width:34px;height:34px;flex:none;}
+.brand-text{font-weight:700;font-size:var(--fs-l);letter-spacing:.02em;white-space:nowrap;}
+.head-nav{display:flex;gap:2px;margin-left:auto;align-items:center;flex-wrap:nowrap;}
+.head-nav a{
+  font-size:var(--fs-s);color:var(--ink-2);padding:7px 10px;border-radius:var(--radius-s);
+  white-space:nowrap;
+}
+.head-nav a:hover{background:var(--line-soft);text-decoration:none;}
+.head-tools{display:flex;align-items:center;gap:8px;flex:none;}
+.menu-btn{
+  display:none;background:none;border:1px solid var(--line);border-radius:var(--radius-s);
+  width:38px;height:34px;align-items:center;justify-content:center;cursor:pointer;padding:0;
+}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--ink-2);position:relative;}
+.menu-btn span::before,.menu-btn span::after{
+  content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink-2);
+}
+.menu-btn span::before{top:-6px;}
+.menu-btn span::after{top:6px;}
+.search-wrap{position:relative;display:flex;align-items:center;}
+.search-wrap input{
+  width:180px;height:34px;border:1px solid var(--line);border-radius:var(--radius-s);
+  padding:0 10px;font-size:var(--fs-s);font-family:inherit;color:var(--ink);background:var(--paper);
+}
+.search-wrap input:focus{background:#fff;}
+.search-feedback{
+  position:absolute;top:40px;right:0;width:260px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--radius-m);box-shadow:var(--shadow-m);padding:10px 12px;font-size:var(--fs-s);
+  display:none;z-index:70;
+}
+.search-feedback.open{display:block;}
+.search-feedback ul{margin:6px 0 0;padding-left:1.1em;}
+.search-feedback li a{font-size:var(--fs-s);}
+
+/* ===== 首屏 ===== */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#0b2036 0%,#103859 55%,#12506f 100%);
+  color:#e8f2fa;
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:var(--space-6) var(--space-3) var(--space-5);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-5);align-items:center;
+  position:relative;z-index:2;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-xs);
+  letter-spacing:.14em;color:#8ef0c2;border:1px solid rgba(142,240,194,.4);
+  padding:4px 10px;border-radius:999px;margin-bottom:var(--space-3);
+}
+.hero h1{
+  font-size:var(--fs-3xl);color:#fff;letter-spacing:.01em;margin-bottom:var(--space-3);
+}
+.hero-lead{font-size:var(--fs-l);color:#c6d9e8;max-width:36em;margin-bottom:var(--space-3);}
+.hero-lead strong{color:#ffd9a8;font-weight:600;}
+.hero-stats{display:flex;gap:var(--space-4);margin:var(--space-4) 0;flex-wrap:wrap;}
+.hero-stat b{display:block;font-size:var(--fs-xl);color:#fff;line-height:1.2;}
+.hero-stat span{font-size:var(--fs-xs);color:#9db8cd;letter-spacing:.06em;}
+.hero-cta{display:flex;gap:var(--space-2);flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:11px 20px;border-radius:var(--radius-s);font-size:var(--fs-m);
+  font-weight:600;border:1px solid transparent;cursor:pointer;font-family:inherit;
+  transition:transform .16s ease, box-shadow .16s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px);box-shadow:var(--shadow-m);}
+.btn-primary{background:#3ddc97;color:#06281a;}
+.btn-ghost{background:transparent;color:#dbeaf6;border-color:rgba(219,234,246,.45);}
+.hero-visual{position:relative;min-height:300px;}
+.hero-visual svg{width:100%;height:auto;}
+.hero-grain{
+  position:absolute;inset:0;z-index:1;opacity:.5;pointer-events:none;
+  background:
+    radial-gradient(circle at 80% 12%, rgba(61,220,151,.22), transparent 42%),
+    radial-gradient(circle at 12% 86%, rgba(255,184,107,.16), transparent 40%);
+}
+
+/* ===== 布局 ===== */
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--space-3);}
+.layout{
+  display:grid;grid-template-columns:1fr 300px;gap:var(--space-5);
+  padding:var(--space-5) 0 var(--space-6);
+  align-items:start;
+}
+.main-col{min-width:0;}
+.side-col{position:sticky;top:calc(var(--announce-h) + var(--head-h) + 16px);}
+
+/* ===== 板块通用 ===== */
+.section{margin-bottom:var(--space-6);}
+.section-head{display:flex;align-items:baseline;gap:var(--space-2);margin-bottom:var(--space-3);flex-wrap:wrap;}
+.section-head h2{font-size:var(--fs-xl);color:var(--brand);}
+.section-head .tag{
+  font-size:var(--fs-xs);color:var(--accent);background:var(--accent-soft);
+  padding:2px 8px;border-radius:999px;font-weight:600;
+}
+.section-sub{font-size:var(--fs-s);color:var(--ink-3);margin-left:auto;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-m);
+  box-shadow:var(--shadow-s);
+}
+.scroll-margin{scroll-margin-top:calc(var(--announce-h) + var(--head-h) + 14px);}
+
+/* 概览网格 */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);}
+.ov-card{padding:var(--space-3);}
+.ov-card h3{font-size:var(--fs-m);margin-bottom:6px;color:var(--brand);}
+.ov-card p{font-size:var(--fs-s);color:var(--ink-3);margin:0;}
+.ov-card .num{font-size:var(--fs-xs);color:var(--accent);font-weight:700;letter-spacing:.08em;}
+
+/* 精选推荐 */
+.feature-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--space-3);}
+.feature-card{overflow:hidden;display:flex;flex-direction:column;}
+.feature-card img{height:150px;object-fit:cover;width:100%;}
+.feature-card .fc-body{padding:var(--space-2) var(--space-3) var(--space-3);flex:1;display:flex;flex-direction:column;}
+.feature-card h3{font-size:var(--fs-m);margin-bottom:6px;}
+.feature-card p{font-size:var(--fs-s);color:var(--ink-3);margin-bottom:var(--space-2);}
+.feature-card .meta{font-size:var(--fs-xs);color:var(--ink-3);margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;}
+.pill{font-size:var(--fs-xs);background:var(--line-soft);color:var(--ink-2);padding:2px 8px;border-radius:999px;}
+.pill.green{background:var(--accent-soft);color:var(--accent);}
+
+/* 最新更新 紧凑列表 */
+.update-list{list-style:none;padding:0;margin:0;}
+.update-list li{
+  display:grid;grid-template-columns:88px 1fr auto;gap:var(--space-3);
+  padding:11px 0;border-bottom:1px dashed var(--line);align-items:baseline;margin:0;
+}
+.update-list li:last-child{border-bottom:none;}
+.update-list time{font-size:var(--fs-xs);color:var(--ink-3);font-variant-numeric:tabular-nums;}
+.update-list .u-title{font-size:var(--fs-s);color:var(--ink);}
+.update-list .u-kind{font-size:var(--fs-xs);color:var(--warn);background:var(--warn-soft);padding:1px 7px;border-radius:4px;}
+
+/* 分类入口 标签索引 */
+.chip-index{display:flex;flex-wrap:wrap;gap:8px;}
+.chip{
+  border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;
+  font-size:var(--fs-s);color:var(--ink-2);display:inline-flex;gap:6px;align-items:center;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+.chip b{font-weight:600;font-size:var(--fs-xs);color:var(--ink-3);}
+
+/* 深度解析 分栏正文 */
+.deep{padding:var(--space-4);}
+.deep h2{margin-bottom:var(--space-2);}
+.deep-intro{font-size:var(--fs-m);color:var(--ink-2);border-left:3px solid var(--accent);padding-left:var(--space-3);}
+.deep h3{font-size:var(--fs-l);color:var(--brand);margin:var(--space-4) 0 var(--space-2);}
+.deep p{font-size:var(--fs-m);color:var(--ink-2);}
+.deep-block{columns:2;column-gap:var(--space-4);}
+.deep-block p{break-inside:avoid;}
+.cmp-table{width:100%;border-collapse:collapse;font-size:var(--fs-s);margin:var(--space-3) 0;}
+.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+.cmp-table th{background:var(--line-soft);color:var(--brand);font-weight:600;}
+.cmp-table td:first-child{white-space:nowrap;color:var(--ink-3);}
+.callout{
+  background:var(--accent-soft);border-radius:var(--radius-m);padding:var(--space-3);
+  font-size:var(--fs-s);color:#0b4a35;margin:var(--space-3) 0;
+}
+.callout strong{color:#06331f;}
+
+/* 体验指南 编号步骤 */
+.steps{list-style:none;counter-reset:step;padding:0;margin:0;display:grid;gap:var(--space-2);}
+.steps li{
+  counter-increment:step;background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);
+  padding:var(--space-3) var(--space-3) var(--space-3) 60px;position:relative;margin:0;
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);position:absolute;left:16px;top:14px;
+  font-size:var(--fs-l);font-weight:700;color:var(--accent);
+}
+.steps h3{font-size:var(--fs-m);margin-bottom:4px;}
+.steps p{font-size:var(--fs-s);color:var(--ink-3);margin:0;}
+
+/* FAQ */
+.faq details{border:1px solid var(--line);border-radius:var(--radius-m);background:#fff;margin-bottom:10px;}
+.faq summary{
+  cursor:pointer;padding:13px 16px;font-weight:600;font-size:var(--fs-m);color:var(--brand);
+  list-style:none;position:relative;padding-right:42px;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:20px;font-weight:400;color:var(--accent);
+}
+.faq details[open] summary::after{content:"−";}
+.faq .ans{padding:0 16px 14px;font-size:var(--fs-s);color:var(--ink-2);}
+
+/* 用户评论 引语卡 */
+.review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);}
+.review{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);padding:var(--space-3);
+  display:flex;flex-direction:column;gap:8px;position:relative;
+}
+.review::before{
+  content:"“";position:absolute;top:2px;right:12px;font-size:44px;color:var(--line);line-height:1;
+  font-family:Georgia,serif;
+}
+.review p{font-size:var(--fs-s);color:var(--ink-2);margin:0;position:relative;z-index:1;}
+.review .who{font-size:var(--fs-xs);color:var(--ink-3);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+.review .who b{color:var(--ink-2);font-weight:600;}
+.stars{color:#d98a1a;letter-spacing:1px;font-size:var(--fs-xs);}
+
+/* 相关资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);}
+.news-item{padding:var(--space-3);}
+.news-item time{font-size:var(--fs-xs);color:var(--accent);font-weight:600;letter-spacing:.04em;}
+.news-item h3{font-size:var(--fs-m);margin:5px 0 6px;}
+.news-item p{font-size:var(--fs-s);color:var(--ink-3);margin:0;}
+
+/* 相关推荐 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.rec-tags a{
+  font-size:var(--fs-s);background:#fff;border:1px solid var(--line);color:var(--ink-2);
+  padding:6px 12px;border-radius:var(--radius-s);
+}
+.rec-tags a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
+
+/* 时间线 / 榜单 */
+.rank{padding:var(--space-3);}
+.rank ol{list-style:none;padding:0;margin:0;counter-reset:rank;}
+.rank li{
+  counter-increment:rank;display:grid;grid-template-columns:30px 1fr auto;gap:10px;
+  align-items:baseline;padding:9px 0;border-bottom:1px dashed var(--line);margin:0;
+}
+.rank li:last-child{border-bottom:none;}
+.rank li::before{
+  content:counter(rank);font-weight:700;color:var(--accent);font-size:var(--fs-s);
+  text-align:center;
+}
+.rank .r-name{font-size:var(--fs-s);color:var(--ink);}
+.rank .r-val{font-size:var(--fs-xs);color:var(--ink-3);font-variant-numeric:tabular-nums;}
+
+/* 侧栏 */
+.side-block{padding:var(--space-3);margin-bottom:var(--space-3);}
+.side-block h2{font-size:var(--fs-m);margin-bottom:var(--space-2);color:var(--brand);}
+.side-nav{display:flex;flex-direction:column;gap:2px;}
+.side-nav a{
+  font-size:var(--fs-s);color:var(--ink-2);padding:6px 9px;border-radius:var(--radius-s);
+  border-left:2px solid transparent;
+}
+.side-nav a:hover{background:var(--line-soft);text-decoration:none;}
+.side-nav a.active{background:var(--accent-soft);color:var(--accent);border-left-color:var(--accent);font-weight:600;}
+.side-list{list-style:none;padding:0;margin:0;}
+.side-list li{font-size:var(--fs-s);padding:6px 0;border-bottom:1px dashed var(--line);margin:0;display:flex;justify-content:space-between;gap:8px;}
+.side-list li:last-child{border-bottom:none;}
+.side-list span{color:var(--ink-3);font-size:var(--fs-xs);white-space:nowrap;}
+.mini-note{font-size:var(--fs-xs);color:var(--ink-3);margin-top:var(--space-2);}
+
+/* 页尾 */
+.site-foot{background:#0b1c2c;color:#a9c0d3;padding:var(--space-5) 0 var(--space-3);font-size:var(--fs-s);}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:var(--space-4);}
+.foot-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:var(--fs-l);margin-bottom:10px;}
+.foot-brand svg{width:28px;height:28px;}
+.site-foot h3{font-size:var(--fs-s);color:#e4eef7;margin-bottom:10px;letter-spacing:.06em;}
+.foot-col ul{list-style:none;padding:0;margin:0;}
+.foot-col li{margin-bottom:6px;}
+.foot-col a{color:#a9c0d3;font-size:var(--fs-s);}
+.foot-col a:hover{color:#8ef0c2;}
+.foot-note{border-top:1px solid rgba(255,255,255,.12);margin-top:var(--space-4);padding-top:var(--space-3);
+  display:flex;justify-content:space-between;gap:var(--space-3);flex-wrap:wrap;font-size:var(--fs-xs);color:#7f9ab0;}
+.foot-note p{margin:0;}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:20px;bottom:24px;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:none;cursor:pointer;display:none;
+  align-items:center;justify-content:center;box-shadow:var(--shadow-m);z-index:80;
+}
+.to-top.show{display:flex;}
+.to-top svg{width:18px;height:18px;}
+
+/* 响应式 */
+@media (max-width:1020px){
+  .layout{grid-template-columns:1fr;}
+  .side-col{position:static;order:2;}
+  .main-col{order:1;}
+  .feature-grid{grid-template-columns:1fr 1fr;}
+  .hero-inner{grid-template-columns:1fr;gap:var(--space-3);}
+  .hero-visual{min-height:0;max-width:420px;}
+  .deep-block{columns:1;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:760px){
+  :root{--fs-3xl:30px;--fs-xl:20px;}
+  .head-nav{
+    display:none;position:absolute;top:var(--head-h);left:0;right:0;
+    background:#fff;border-bottom:1px solid var(--line);flex-direction:column;
+    padding:8px var(--space-3) 14px;gap:0;box-shadow:var(--shadow-m);
+  }
+  .head-nav.open{display:flex;}
+  .head-nav a{padding:10px 4px;font-size:var(--fs-m);border-bottom:1px solid var(--line-soft);width:100%;}
+  .menu-btn{display:inline-flex;}
+  .search-wrap input{width:118px;}
+  .search-feedback{width:220px;right:-40px;}
+  .grid-3{grid-template-columns:1fr 1fr;}
+  .feature-grid{grid-template-columns:1fr;}
+  .review-grid,.news-grid{grid-template-columns:1fr;}
+  .update-list li{grid-template-columns:1fr;gap:2px;}
+  .update-list .u-kind{justify-self:start;}
+  .hero-stats{gap:var(--space-3);}
+  .foot-grid{grid-template-columns:1fr;}
+  .to-top{right:12px;bottom:16px;}
+}
+@media (max-width:420px){
+  :root{--fs-3xl:26px;}
+  .grid-3{grid-template-columns:1fr;}
+  .search-wrap input{width:96px;}
+  .head-inner{gap:8px;}
+  .brand-text{font-size:var(--fs-m);}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none !important;animation:none !important;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="announce" id="announce">
+  <span class="dot" aria-hidden="true"></span>
+  <strong>秘密入口导航站点</strong>
+  <p>11月7日更新：新增「独立影像档案」入口 3 条、下线失联站 2 条，<a href="/#updates">查看变更记录</a></p>
+</div>
+
+<header class="site-head" id="siteHead">
+  <div class="head-inner">
+    <a class="brand" href="/#top" aria-label="秘密入口导航站点 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="14" fill="#0e2a47"/>
+        <path d="M18 34h28M18 34l8-8M18 34l8 8" stroke="#3ddc97" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="46" cy="22" r="5" fill="#ffb86b"/>
+      </svg>
+      <span class="brand-text">秘密入口导航站点</span>
+    </a>
+    <nav class="head-nav" id="headNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#picks">精选推荐</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#channels">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="head-tools">
+      <div class="search-wrap">
+        <label for="searchInput" class="sr-only">搜索站点条目</label>
+        <input id="searchInput" type="search" placeholder="搜入口 / 站点名" autocomplete="off">
+        <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="headNav" aria-label="展开导航菜单">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-grain" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <span class="hero-kicker">独立站点 · 隐藏入口 · 人工核对</span>
+      <h1>秘密入口导航站点</h1>
+      <p class="hero-lead">把散落在论坛签名、个人博客侧栏、邮件尾注里的独立站点入口收拢到一处。每条入口标注收录日期、可访问状态和<strong>最后一次人工核对结果</strong>，失联即下架，不保留跳转壳。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>146</b><span>在册入口</span></div>
+        <div class="hero-stat"><b>32</b><span>本月核对</span></div>
+        <div class="hero-stat"><b>11</b><span>主题频道</span></div>
+        <div class="hero-stat"><b>2</b><span>本周下线</span></div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/#picks">浏览本周精选</a>
+        <a class="btn btn-ghost" href="/#guide">看懂收录规则</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 400 320" role="presentation">
+        <defs>
+          <linearGradient id="doorGlow" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3ddc97" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#2aa6c9" stop-opacity=".6"/>
+          </linearGradient>
+        </defs>
+        <circle cx="205" cy="150" r="120" fill="none" stroke="#2a5578" stroke-width="1" stroke-dasharray="3 7"/>
+        <circle cx="205" cy="150" r="88" fill="none" stroke="#2a5578" stroke-width="1"/>
+        <rect x="168" y="96" width="74" height="118" rx="8" fill="none" stroke="url(#doorGlow)" stroke-width="3"/>
+        <circle cx="226" cy="158" r="4" fill="#ffb86b"/>
+        <path d="M168 120h-26M168 150h-18M168 180h-26" stroke="#3c6c93" stroke-width="2" stroke-linecap="round"/>
+        <path d="M242 120h24M242 150h16M242 180h24" stroke="#3c6c93" stroke-width="2" stroke-linecap="round"/>
+        <rect x="60" y="60" width="46" height="30" rx="6" fill="#123a5a"/>
+        <rect x="286" y="214" width="56" height="34" rx="6" fill="#123a5a"/>
+        <rect x="70" y="222" width="40" height="26" rx="6" fill="#123a5a"/>
+        <path d="M108 78l16 22M282 228l-14 -16" stroke="#3c6c93" stroke-width="1.6" stroke-dasharray="4 5"/>
+        <circle cx="318" cy="86" r="6" fill="#ffb86b" opacity=".9"/>
+        <circle cx="96" cy="196" r="4" fill="#3ddc97" opacity=".8"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="layout">
+
+    <!-- ============ 主内容列 ============ -->
+    <main class="main-col" id="main">
+
+      <!-- 1. 领域概览 -->
+      <section class="section scroll-margin" id="overview" aria-labelledby="h-overview">
+        <div class="section-head">
+          <h2 id="h-overview">领域概览</h2>
+          <span class="tag">先看边界</span>
+        </div>
+        <p style="color:var(--ink-2);font-size:var(--fs-s);max-width:44em;margin-bottom:var(--space-3);">
+          “秘密入口”在中文互联网语境里指向三类不同的东西：一是没有对外宣传、靠口碑流传的个人站点；二是平台内部未公开的专题聚合页；三是以邀请码或暗号进入的小型社区。三者的可访问性、持续性和信息密度差别很大，混在一起索引会误导判断。
+        </p>
+        <div class="grid-3">
+          <div class="card ov-card">
+            <span class="num">类型 A</span>
+            <h3>个人独立站</h3>
+            <p>常见于博客侧栏与论坛签名，域名多为个人注册，更新节奏不稳定但内容原创度高，失效后一般不迁移，只留一个 404 页。</p>
+          </div>
+          <div class="card ov-card">
+            <span class="num">类型 B</span>
+            <h3>专题聚合页</h3>
+            <p>由平台编辑维护，地址不在主站导航中，需从文章内链或搜索快照进入。存活周期通常与运营活动同步，30 至 90 天不等的居多。</p>
+          </div>
+          <div class="card ov-card">
+            <span class="num">类型 C</span>
+            <h3>邀请制小社区</h3>
+            <p>进入门槛最高，需邀请码或特定口令。多数对爬虫封闭，收录时只能核对落地页文案与其公开说明，无法核实内部内容。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section class="section scroll-margin" id="picks" aria-labelledby="h-picks">
+        <div class="section-head">
+          <h2 id="h-picks">本周精选入口</h2>
+          <span class="section-sub">核对日期 2026-11-06</span>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature-card">
+            <img src="https://picsum.photos/seed/darkarchive07/640/360" width="640" height="360" loading="lazy" alt="旧浏览器窗口截图风格的独立影像档案首页示意">
+            <div class="fc-body">
+              <h3>独立影像档案·2013—2016 公开页</h3>
+              <p>收录 213 部实验短片的元数据，含导演自述与放映记录，页面无广告，允许下载 PDF 目录。</p>
+              <div class="meta"><span class="pill green">可访问</span><span class="pill">影像</span><span>收录于 10-28</span></div>
+            </div>
+          </article>
+          <article class="card feature-card">
+            <img src="https://picsum.photos/seed/quietmap12/400/360" width="400" height="360" loading="lazy" alt="城市夜间街道地图风格插画，标注四处隐藏入口">
+            <div class="fc-body">
+              <h3>城市夜行地图·隐藏入口标注版</h3>
+              <p>把书店、唱片店与旧剧场的后门入口做成可缩放地图，每周四晚更新一次。</p>
+              <div class="meta"><span class="pill green">可访问</span><span>地图</span></div>
+            </div>
+          </article>
+          <article class="card feature-card">
+            <img src="https://picsum.photos/seed/typebox33/400/360" width="400" height="360" loading="lazy" alt="打字机键盘特写，背景是成叠的手写稿件">
+            <div class="fc-body">
+              <h3>中文打字机史料入口</h3>
+              <p>个人整理的打字机广告扫描件，附带邮件问答记录，适合做版本比对。</p>
+              <div class="meta"><span class="pill" style="background:var(--warn-soft);color:var(--warn)">待复核</span><span>史料</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="section scroll-margin" id="updates" aria-labelledby="h-updates">
+        <div class="section-head">
+          <h2 id="h-updates">最新更新记录</h2>
+          <span class="section-sub">近七天</span>
+        </div>
+        <div class="card" style="padding:var(--space-2) var(--space-3);">
+          <ul class="update-list">
+            <li><time datetime="2026-11-07">11-07</time><span class="u-title">新增「独立影像档案」入口 3 条，含两个子栏目地址</span><span class="u-kind">新增</span></li>
+            <li><time datetime="2026-11-07">11-07</time><span class="u-title">下线「老照片交换所」与「磁带转录站」两条失联入口</span><span class="u-kind">下线</span></li>
+            <li><time datetime="2026-11-05">11-05</time><span class="u-title">城市夜行地图更新至第 41 版，新增两处后门标注</span><span class="u-kind">修正</span></li>
+            <li><time datetime="2026-11-03">11-03</time><span class="u-title">补充邀请制社区的访问说明与口令轮换周期</span><span class="u-kind">说明</span></li>
+            <li><time datetime="2026-11-01">11-01</time><span class="u-title">中文打字机史料入口改为待复核，页面证书 10-31 到期</span><span class="u-kind">状态</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section scroll-margin" id="channels" aria-labelledby="h-channels">
+        <div class="section-head">
+          <h2 id="h-channels">分类入口索引</h2>
+          <span class="tag">11 个频道</span>
+        </div>
+        <div class="chip-index">
+          <a class="chip" href="/#picks">独立影像档案 <b>24</b></a>
+          <a class="chip" href="/#picks">城市夜行地图 <b>9</b></a>
+          <a class="chip" href="/#updates">中文打字机史料 <b>17</b></a>
+          <a class="chip" href="/#deep">个人博客隐藏页 <b>31</b></a>
+          <a class="chip" href="/#guide">邀请制小社区 <b>12</b></a>
+          <a class="chip" href="/#news">旧书店后门入口 <b>8</b></a>
+          <a class="chip" href="/#reviews">论坛签名档索引 <b>19</b></a>
+          <a class="chip" href="/#faq">存档与快照站 <b>6</b></a>
+          <a class="chip" href="/#rank">电台与播客私藏页 <b>11</b></a>
+          <a class="chip" href="/#reviews">手写稿件扫描库 <b>5</b></a>
+          <a class="chip" href="/#news">独立展映预告页 <b>4</b></a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析 -->
+      <section class="section scroll-margin card deep" id="deep" aria-labelledby="h-deep">
+        <div class="section-head">
+          <h2 id="h-deep">深度解析：入口收录该不该保留失联记录</h2>
+          <span class="tag">唯一主体阅读区</span>
+        </div>
+        <p class="deep-intro">判断：一个入口导航的可信度，取决于它肯不肯把死链摆出来。只留活链的索引看起来干净，却把核对成本悄悄转嫁给访问者。</p>
+
+        <h3>一条时间线：从收录到下线平均 47 天</h3>
+        <p>以 2026 年 9 月 1 日至 11 月 7 日的记录为样本，在册的 146 条入口中，有 38 条完成了完整生命周期。从首次收录到被判定失联，最短 9 天，最长 213 天，中位数落在 47 天。其中个人独立站的中位数是 61 天，专题聚合页只有 23 天。这个差距与运营排期直接相关：聚合页随活动上线，活动结束即撤路由，而个人站多由一人维护，疏忽导致域名过期的时间点更分散。</p>
+
+        <h3>两组数字的对照：保留死链 vs 删除死链</h3>
+        <table class="cmp-table">
+          <caption class="sr-only">两种处理方式的对照</caption>
+          <thead>
+            <tr><th>维度</th><th>保留失联记录</th><th>直接删除</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>核对耗时</td><td>每条需二次确认，约 4 分钟</td><td>约 1 分钟</td></tr>
+            <tr><td>访问者误点</td><td>可见状态标签，误点率下降</td><td>仅剩活链，表面误点少</td></tr>
+            <tr><td>信息留存</td><td>可追溯站点消亡时间</td><td>历史完全丢失</td></tr>
+            <tr><td>争议点</td><td>页面变长，杂乱</td><td>无法判断是失效还是从未存在</td></tr>
+          </tbody>
+        </table>
+        <p>争论的核心在于“索引的职责边界”。主张删除的一方认为，导航的价值就是把人送到目的地，送达失败即无价值；主张保留的一方则指出，失联本身是领域信息——某个独立影像档案在 2026 年 10 月中旬停止解析，恰恰说明那批内容没有迁移到任何商业平台。</p>
+
+        <h3>说法差异：三位维护者的不同规则</h3>
+        <p>「城市夜行地图」的维护者林舟在 10 月 29 日的更新说明里写，只要地图上的店铺还营业，入口就不撤；「论坛签名档索引」的维护者则采取 30 天无响应即隐藏的做法；第三位维护者运营的存档与快照站，把死链全部转成快照页，代价是约 27% 的快照已经缺图。三种规则没有对错，但都必须在页面上写清楚，否则访问者无法判断某个入口的缺席意味着什么。</p>
+
+        <div class="callout">
+          <strong>可核对的中段：</strong>10 月 18 日「磁带转录站」首页返回 522，10 月 21 日恢复，10 月 30 日再次 522 并持续至今；同域的邮件列表在 11 月 2 日仍收到一封群发，说明域名未注销，只是服务器问题。因此它被标为“待复核”，而不是直接下线。
+        </div>
+
+        <div class="deep-block">
+          <p>把“秘密入口”当成一种固定清单是不成立的。本站的核对表里，每条入口记录四项：收录日期、最近核对日期、返回状态、可识别的维护者代号。四项里缺两项以上，就进入“待复核”区，不再出现在精选推荐中。</p>
+          <p>关于是否需要登录才能查看内容，处理方式也应区分。专题聚合页多数公开可读，邀请制社区则连落地页都可能只显示一句欢迎语。后者是否收录，取决于它是否在别处留下了公开的作品或讨论记录——有痕迹才可核实。</p>
+        </div>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="section scroll-margin" id="guide" aria-labelledby="h-guide">
+        <div class="section-head">
+          <h2 id="h-guide">访问体验指南</h2>
+          <span class="tag">四步</span>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>先看状态标签再点</h3>
+            <p>绿色“可访问”表示 72 小时内人工打开成功；黄色“待复核”表示最近一次核对失败但站点可能仍在；灰色表示已下线，仅作记录保留。</p>
+          </li>
+          <li>
+            <h3>确认入口类型</h3>
+            <p>类型 A 与类型 C 的进入方式完全不同。个人独立站直接打开即可；邀请制社区需在其公开页找到申请说明，本站不代发邀请码。</p>
+          </li>
+          <li>
+            <h3>用快照判断内容是否值得追</h3>
+            <p>对 30 天内有变动的入口，先看存档站的历史快照，对比标题与栏目结构，能快速判断它是不是临时活动页。</p>
+          </li>
+          <li>
+            <h3>发现失效时提供核对信息</h3>
+            <p>在页面底部的反馈入口提交域名、返回状态和发生时间。只写“打不开”的反馈无法处理，需要至少一个能复现的时间点。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section scroll-margin" id="faq" aria-labelledby="h-faq">
+        <div class="section-head">
+          <h2 id="h-faq">常见问题</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>独立影像档案的入口为什么只保留首页地址？</summary>
+            <div class="ans">该站子栏目路由在 10 月改过一次，旧的深层链接有约三成返回 404。保留首页地址可以避免访问者从导航进入后立刻撞上错误页，深层索引等结构稳定后再补。</div>
+          </details>
+          <details>
+            <summary>邀请制小社区不公开内容，收录标准是什么？</summary>
+            <div class="ans">要求它在别处留下可核实的公开痕迹，例如作者署名、放映记录或论坛讨论帖。没有任何外部痕迹的社区不收录，因为无法区分真实项目与空壳页面。</div>
+          </details>
+          <details>
+            <summary>口令轮换会不会影响入口可用性？</summary>
+            <div class="ans">会影响。轮换周期短的社区，落地页常出现一句新提示。本站只在公开说明中记录轮换周期，不记录具体口令，也不替任何社区转发进入方式。</div>
+          </details>
+          <details>
+            <summary>城市夜行地图的入口多久核对一次？</summary>
+            <div class="ans">每周四晚更新后核对一次，因为维护者固定在周四发布新版本。若连续两周未更新，改为每三天核对。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section scroll-margin" id="reviews" aria-labelledby="h-reviews">
+        <div class="section-head">
+          <h2 id="h-reviews">用户实测反馈</h2>
+          <span class="section-sub">共 27 条，节选 4 条</span>
+        </div>
+        <div class="review-grid">
+          <article class="review">
+            <p>独立影像档案那个页面确实能打开，213 部短片的目录我也下载了 PDF。但导演自述部分有 11 条缺页，扫码进去是空白，可能是扫描时漏了。</p>
+            <div class="who"><b>@南岭路口</b><span class="stars">★★★★☆</span></div>
+          </article>
+          <article class="review">
+            <p>城市夜行地图第 41 版把旧剧场后门标到了隔壁巷子，我按图走了两趟都没找到。维护者在 11 月 5 日的更新说明里承认坐标偏了大约 40 米。</p>
+            <div class="who"><b>@夜班公交</b><span class="stars">★★★☆☆</span></div>
+          </article>
+          <article class="review">
+            <p>打字机史料入口提示证书到期以后，我就暂时没再进。这类个人站的证书问题很常见，能理解，但标成待复核是对的，至少不会让人白点。</p>
+            <div class="who"><b>@旧纸堆</b><span class="stars">★★★★☆</span></div>
+          </article>
+          <article class="review">
+            <p>不太明白为什么邀请制社区单独开一个频道。我试了其中三个，两个落地页只有一句欢迎语，第三个干脆连申请说明都没有。信息量太低。</p>
+            <div class="who"><b>@折叠椅</b><span class="stars">★★☆☆☆</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section scroll-margin" id="news" aria-labelledby="h-news">
+        <div class="section-head">
+          <h2 id="h-news">相关资讯</h2>
+        </div>
+        <div class="news-grid">
+          <div class="card news-item">
+            <time datetime="2026-11-06">2026-11-06</time>
+            <h3>旧书店后门入口增至 8 条</h3>
+            <p>本周新增的两条分别位于城南与老码头，均来自书店店员在社交账号上发布的活动照片，含后门开门时间。</p>
+          </div>
+          <div class="card news-item">
+            <time datetime="2026-11-04">2026-11-04</time>
+            <h3>存档与快照站调整抓取频率</h3>
+            <p>维护者把抓取间隔从 7 天改到 3 天，理由是聚合页生命周期短，7 天可能只抓到一次已关闭的页面。</p>
+          </div>
+          <div class="card news-item">
+            <time datetime="2026-11-02">2026-11-02</time>
+            <h3>电台与播客私藏页完成第二轮核对</h3>
+            <p>11 条入口中 9 条可访问，1 条换了域名，1 条仅剩邮件订阅入口，已归入待复核区。</p>
+          </div>
+          <div class="card news-item">
+            <time datetime="2026-10-30">2026-10-30</time>
+            <h3>磁带转录站连续 522 后未注销</h3>
+            <p>域名注册信息未变，邮件列表 11 月 2 日仍有群发记录。被判定为服务器故障而非关站。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section scroll-margin" id="rec" aria-labelledby="h-rec">
+        <div class="section-head">
+          <h2 id="h-rec">相关推荐标签</h2>
+        </div>
+        <div class="rec-tags">
+          <a href="/#picks">独立影像档案入口</a>
+          <a href="/#picks">城市夜行地图标注</a>
+          <a href="/#updates">中文打字机史料扫描</a>
+          <a href="/#deep">个人博客隐藏页面</a>
+          <a href="/#guide">邀请制小社区申请</a>
+          <a href="/#news">旧书店后门入口</a>
+          <a href="/#reviews">论坛签名档索引</a>
+          <a href="/#faq">存档与快照站</a>
+          <a href="/#rank">电台播客私藏页</a>
+          <a href="/#reviews">手写稿件扫描库</a>
+        </div>
+      </section>
+
+      <!-- 11. 榜单 -->
+      <section class="section scroll-margin card rank" id="rank" aria-labelledby="h-rank">
+        <div class="section-head">
+          <h2 id="h-rank">本月访问稳定度榜单</h2>
+          <span class="section-sub">按 30 天内核对成功次数排序</span>
+        </div>
+        <ol>
+          <li><span class="r-name">城市夜行地图·隐藏入口标注版</span><span class="r-val">12 / 12 次</span></li>
+          <li><span class="r-name">独立影像档案·2013—2016 公开页</span><span class="r-val">11 / 12 次</span></li>
+          <li><span class="r-name">存档与快照站主索引</span><span class="r-val">10 / 12 次</span></li>
+          <li><span class="r-name">旧书店后门入口（城南店）</span><span class="r-val">9 / 12 次</span></li>
+          <li><span class="r-name">电台与播客私藏页（第二组）</span><span class="r-val">8 / 12 次</span></li>
+          <li><span class="r-name">中文打字机史料入口</span><span class="r-val">6 / 12 次</span></li>
+          <li><span class="r-name">磁带转录站</span><span class="r-val">3 / 12 次</span></li>
+        </ol>
+      </section>
+
+    </main>
+
+    <!-- ============ 侧栏 ============ -->
+    <aside class="side-col" aria-label="侧栏导航与速览">
+      <div class="card side-block">
+        <h2>栏目导航</h2>
+        <nav class="side-nav" id="sideNav" aria-label="页面栏目快速跳转">
+          <a href="/#overview">领域概览</a>
+          <a href="/#picks">本周精选入口</a>
+          <a href="/#updates">最新更新记录</a>
+          <a href="/#channels">分类入口索引</a>
+          <a href="/#deep">深度解析</a>
+          <a href="/#guide">访问体验指南</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#reviews">用户实测反馈</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#rec">相关推荐标签</a>
+          <a href="/#rank">稳定度榜单</a>
+        </nav>
+      </div>
+      <div class="card side-block">
+        <h2>核对状态速览</h2>
+        <ul class="side-list">
+          <li>可访问入口 <span>121 条</span></li>
+          <li>待复核入口 <span>14 条</span></li>
+          <li>已下线记录 <span>11 条</span></li>
+          <li>本周新增 <span>5 条</span></li>
+          <li>本周下线 <span>2 条</span></li>
+        </ul>
+        <p class="mini-note">核对由两名维护者交叉完成，状态变更以较晚一次为准。</p>
+      </div>
+      <div class="card side-block">
+        <h2>提交核对信息</h2>
+        <p style="font-size:var(--fs-s);color:var(--ink-3);margin-bottom:8px;">发现入口失效或信息过期，附上域名、返回状态与时间点，便于复现。</p>
+        <a class="btn btn-primary" href="/#guide" style="font-size:var(--fs-s);padding:8px 14px;">查看提交格式</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer class="site-foot" id="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <rect width="64" height="64" rx="14" fill="#123a5a"/>
+            <path d="M18 34h28M18 34l8-8M18 34l8 8" stroke="#3ddc97" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="46" cy="22" r="5" fill="#ffb86b"/>
+          </svg>
+          秘密入口导航站点
+        </div>
+        <p style="margin:0;font-size:var(--fs-s);">为独立站点与隐藏入口留一份可核对的索引，状态标签比数量更重要。</p>
+      </div>
+      <div class="foot-col">
+        <h3>入口频道</h3>
+        <ul>
+          <li><a href="/#picks">独立影像档案</a></li>
+          <li><a href="/#picks">城市夜行地图</a></li>
+          <li><a href="/#updates">中文打字机史料</a></li>
+          <li><a href="/#news">旧书店后门入口</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>使用帮助</h3>
+        <ul>
+          <li><a href="/#guide">访问体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#deep">收录规则解析</a></li>
+          <li><a href="/#rec">相关推荐标签</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>核对与反馈</h3>
+        <ul>
+          <li><a href="/#updates">最新更新记录</a></li>
+          <li><a href="/#rank">稳定度榜单</a></li>
+          <li><a href="/#reviews">用户实测反馈</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <p>页面示例数据：入口数量、核对次数与评论均为演示内容，不代表真实站点。</p>
+      <p>更新于 2026-11-08 · 最近可核对更新项：11-07 新增影像档案入口 3 条、下线失联站 2 条。© 2026 秘密入口导航站点</p>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到页面顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var headNav = document.getElementById('headNav');
+
+  if(menuBtn && headNav){
+    menuBtn.addEventListener('click', function(){
+      var open = headNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? '收起导航菜单' : '展开导航菜单');
+    });
+    headNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 760){
+        headNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.setAttribute('aria-label','展开导航菜单');
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY > 480){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+    highlightNav();
+  }
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+    document.getElementById('main').setAttribute('tabindex','-1');
+  });
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var targets = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlightNav(){
+    var pos = window.scrollY + 140;
+    var current = -1;
+    targets.forEach(function(t, i){
+      if(t && t.offsetTop <= pos){ current = i; }
+    });
+    sideLinks.forEach(function(a, i){
+      a.classList.toggle('active', i === current);
+      if(i === current){ a.setAttribute('aria-current','true'); }
+      else{ a.removeAttribute('aria-current'); }
+    });
+  }
+  highlightNav();
+
+  /* 本地搜索 */
+  var input = document.getElementById('searchInput');
+  var feedback = document.getElementById('searchFeedback');
+  var index = [];
+  document.querySelectorAll('#main .section').forEach(function(sec){
+    index.push({title: (sec.querySelector('h2')||{}).textContent || '', id: sec.id});
+    sec.querySelectorAll('h3').forEach(function(h){
+      if(h.textContent.trim()){
+        index.push({title: h.textContent.trim(), id: sec.id});
+      }
+    });
+  });
+  function doSearch(){
+    var q = input.value.trim();
+    feedback.innerHTML = '';
+    if(!q){ feedback.classList.remove('open'); return; }
+    var hits = index.filter(function(it){ return it.title.indexOf(q) !== -1; });
+    if(hits.length === 0){
+      feedback.innerHTML = '<div>没有找到「' + escapeHtml(q) + '」相关条目。试试“影像”“地图”“打字机”“快照”。</div>';
+    } else {
+      var html = '<div>找到 ' + hits.length + ' 条：</div><ul>';
+      hits.slice(0, 6).forEach(function(it){
+        html += '<li><a href="/#' + it.id + '">' + escapeHtml(it.title) + '</a></li>';
+      });
+      html += '</ul>';
+      feedback.innerHTML = html;
+    }
+    feedback.classList.add('open');
+  }
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  input.addEventListener('input', doSearch);
+  input.addEventListener('focus', function(){ if(input.value.trim()) doSearch(); });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.search-wrap')){ feedback.classList.remove('open'); }
+  });
+  feedback.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ feedback.classList.remove('open'); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ feedback.classList.remove('open'); }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "秘密入口导航站点",
+  "description": "汇总独立站点、隐藏入口与专题聚合页的可核对索引，标注收录日期与访问状态。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "独立影像档案的入口为什么只保留首页地址？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "该站子栏目路由在10月改过一次，旧的深层链接有约三成返回404。保留首页地址可以避免访问者从导航进入后立刻撞上错误页。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "邀请制小社区不公开内容，收录标准是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "要求它在别处留下可核实的公开痕迹，例如作者署名、放映记录或论坛讨论帖。没有任何外部痕迹的社区不收录。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "口令轮换会不会影响入口可用性？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "会影响。轮换周期短的社区，落地页常出现一句新提示。本站只在公开说明中记录轮换周期，不记录具体口令。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "城市夜行地图的入口多久核对一次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "每周四晚更新后核对一次，因为维护者固定在周四发布新版本。若连续两周未更新，改为每三天核对。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+          </html>
